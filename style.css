@@ -1,0 +1,96 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+  }
+  
+  header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+  }
+  
+  .container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  form label {
+	display: block;
+	margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form input[type="number"] {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	font-size: 16px;
+  }
+  
+  form input[type="submit"],
+  form button {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  form input[type="submit"]:hover,
+  form button:hover {
+	background-color: #555;
+  }
+  
+  table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+  }
+  
+  table th,
+  table td {
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: left;
+  }
+  
+  table th {
+	background-color: #333;
+	color: #fff;
+  }
+  
+  table td:last-child {
+	text-align: center;
+  }
+  
+  table td button {
+	background-color: #cc0000;
+	color: #fff;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  table td button:first-child {
+	margin-right: 10px;
+	background-color: #333;
+  }
+  
+  table td button:hover {
+	background-color: #ff0000;
+  }

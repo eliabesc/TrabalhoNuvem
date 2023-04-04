@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de Dados</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Formulário de Dados</h1>
+	<form id="form">
+		<label for="nome">Nome:</label>
+		<input type="text" id="nome" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" required>
+
+		<label for="telefone">Telefone:</label>
+		<input type="tel" id="telefone" required>
+
+		<label for="idade">Idade:</label>
+		<input type="number" id="idade" required>
+
+		<button type="submit" id="salvar">Salvar</button>
+		<button type="button" id="limpar">Limpar</button>
+	</form>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Telefone</th>
+				<th>Idade</th>
+				<th>Ação</th>
+			</tr>
+		</thead>
+		<tbody id="lista-dados">
+			<!-- Dados inseridos pelo usuário aparecerão aqui -->
+		</tbody>
+	</table>
+
+	<script src="script.js"></script>
+</body>
+</html>
