@@ -1,5 +1,5 @@
- const form = document.getElementById('form');
- const listaDados = document.getElementById('lista-dados');
+const form = document.getElementById('form');
+const listaDados = document.getElementById('lista-dados');
 let dados = [];
 
 const botaoSalvar = document.getElementById("salvar");
@@ -7,7 +7,7 @@ const botaoSalvar = document.getElementById("salvar");
 botaoSalvar.addEventListener("click", function (event) {
   event.preventDefault();
 
-  salvarDados()
+  salvarDados();
 });
 
 // Função para salvar dados
@@ -24,7 +24,17 @@ function salvarDados() {
     "idade": idade
   };
 
-  dados.push(novoDado);
+  if (document.getElementById('salvar').innerText === 'Salvar') {
+    dados.push(novoDado);
+  } else {
+    const index = document.getElementById('indice').value;
+    dados[index].nome = nome;
+    dados[index].email = email;
+    dados[index].telefone = telefone;
+    dados[index].idade = idade;
+    document.getElementById('salvar').innerText = 'Salvar';
+  }
+
   console.log(dados);
   atualizarTabela();
   limparFormulario();
@@ -79,17 +89,11 @@ function editarDados(i) {
   document.getElementById('telefone').value = dados[i].telefone;
   document.getElementById('idade').value = dados[i].idade;
   document.getElementById('salvar').innerText = 'Atualizar';
+  document.getElementById('indice').value = i;
   form.onsubmit = (event) => {
     event.preventDefault();
-    dados[i].nome = document.getElementById('nome').value;
-    dados[i].email = document.getElementById('email').value;
-    dados[i].telefone = document.getElementById('telefone').value;
-    dados[i].idade = document.getElementById('idade').value;
-    atualizarTabela();
-    limparFormulario();
-    document.getElementById('salvar').innerText = 'Salvar';
-    form.onsubmit = salvarDados;
-  }
+    salvarDados();
+  };
 }
 
 // Função para excluir dados
